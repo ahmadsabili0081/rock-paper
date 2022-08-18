@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  .apps{
+    position: relative;
+    h1{
+      text-align: center;
+    }
+    .notif{
+      padding: 30px;
+      top: 35%;
+      transform: translate(-50%,-50%);
+      left: 50%;
+      display: none;
+      position: absolute;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 2px 5px 10px rgba(0,0,0,0.10);
+      transition: 0.5s;
+      animation: notif ease 0.5s;
+      z-index: 20;
+    }
+    .notif.active{
+      display: block;
+      transition: 2.5s;
+    }
+    .score{
+      width: 250px;
+      margin: 30px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .line{
+        font-size: 50px;
+      }
+      .kamu,.komputer{
+        font-size: 45px;
+        width: 50%;
+        text-align: center;
+      }
+    }
+    margin: 50px auto;
+    width: 1200px;
+    height: auto;
+    padding: 20px;
+  }
+  .row__user{
+    width: 100%;
+    display: flex;
+    margin: 20px 0px;
+    justify-content: space-between;
+    align-items: center;
+    .box__user{
+      width: 50%;
+      height: 200px;
+      .lives{
+        margin: 0px auto;
+        width: 170px;
+        h1{
+          display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+      }
+      .box__user_hasil{
+        padding: 20px;
+        text-align: center;
+        span{
+          display: inline-block;
+          font-size: 120px;
+          transition: 0.5s;
+          animation-name: sliding;
+          animation-timing-function: ease;
+          animation-duration: 0.7s;
+        }
+      }
+    }
+    .box__computer{
+      width: 50%;
+      height: 200px;
+      .lives{
+        margin: 0px auto;
+        width: 170px;
+        h1{
+          display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+      }
+      .box__user__computer{
+        padding: 20px;
+        text-align: center;
+        span{
+          display: block;
+          font-size: 120px;
+          transition: 0.5s;
+          animation-name: slidingCom;
+          animation-timing-function: ease;
+          animation-duration: 0.7s;
+        }
+      }
+    }
+  }
+  .row__rock__paper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    .box__you{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button{
+        margin: 0px 20px;
+        font-size: 120px;
+        margin: 0px 10px;
+        background: unset;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
+    .box__computer{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button{
+        font-size: 120px;
+        margin: 0px 10px;
+        background: unset;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:570px) {
+  .container{
+    width: 100%;
+    .apps{
+      width: 100%;
+      padding: 0px 10px;
+      .notif{
+        width: 90%;
+        text-align: center;
+      }
+      h1{
+        font-size: 30px;
+        text-align: center;
+      }
+      .score{
+        width: 100%;
+      }
+    }
+    .row__user{
+      .box__user{
+        margin: 10px 0px;
+        .lives{
+          h1{
+            font-size: 25px;
+          }
+        }
+      }
+      .box__computer{
+        .lives{
+          h1{
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .row__rock__paper{
+      margin-top: 30px;
+      .box__you{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        button{
+          font-size: 100px;
+          margin: 10px 0px;
+        }
+      }
+      .box__computer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        button{
+          margin: 10px 0px;
+          font-size: 100px;
+        }
+      }
+    }
+  }
+}
+@keyframes sliding {
+  from{
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes notif {
+  from{
+    opacity: 0;
+    top: -30px;
+  }
+  to{
+    opacity: 1;
+    top: 35%;
+  }
+}
+@keyframes slidingCom {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

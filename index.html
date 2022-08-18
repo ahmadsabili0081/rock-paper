@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kertas Gunting Batu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="apps">
+        <div class="notif">
+          <h3 class="kata"></h3>
+        </div>
+        <h1>Kertas,Guntung,Batu Sederhana</h1>
+        <div class="score">
+          <div class="kamu">0</div>
+          <div class="line">-</div>
+          <div class="komputer">0</div>
+        </div>
+        <div class="row__user">
+          <div class="box__user">
+            <div class="lives">
+              <h1>
+                Nyawa :
+                <div class="angka">10</div>
+              </h1>
+            </div>
+            <h1>Kamu</h1>
+            <div class="box__user_hasil"></div>
+          </div>
+          <div class="box__computer">
+            <div class="lives">
+              <h1>
+                Nyawa :
+                <div class="angkaKomputer">10</div>
+              </h1>
+            </div>
+            <h1>Komputer</h1>
+            <div class="box__user__computer"></div>
+          </div>
+        </div>
+        <div class="row__rock__paper">
+          <div class="box__you">
+            <button class="click" type="button">
+              <i id="batu" class="fa-solid fa-hand-back-fist"></i>
+            </button>
+            <button class="click" type="button">
+              <i id="kertas" class="fa-solid fa-hand"></i>
+            </button>
+            <button class="click" type="button">
+              <i id="gunting" class="fa-solid fa-hand-scissors"></i>
+            </button>
+          </div>
+          <div class="box__computer">
+            <button class="computer" type="button">
+              <i id="batu" class="fa-solid fa-hand-back-fist"></i>
+            </button>
+            <button class="computer" type="button">
+              <i id="kertas" class="fa-solid fa-hand"></i>
+            </button>
+            <button class="computer" type="button">
+              <i id="gunting" class="fa-solid fa-hand-scissors"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
